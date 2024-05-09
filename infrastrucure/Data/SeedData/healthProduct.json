@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "Pharaoh's Multivitamin Capsules",
+    "Description": "Boost your health with Pharaoh's Multivitamin Capsules. A comprehensive blend of essential vitamins and minerals.",
+    "Price": 25,
+    "PictureUrl": "images/products/healthcare-pharaoh-multivitamin.png",
+    "ProductTypeId": 25,
+    "ProductBrandId": 25
+  },
+  {
+    "Name": "Nile Herbal Tea Blend",
+    "Description": "Experience the soothing benefits of Nile Herbal Tea Blend. A harmonious mix of herbs for relaxation and wellness.",
+    "Price": 15,
+    "PictureUrl": "images/products/healthcare-nile-herbal-tea.png",
+    "ProductTypeId": 26,
+    "ProductBrandId": 26
+  },
+  {
+    "Name": "Delta Omega-3 Fish Oil",
+    "Description": "Support heart health with Delta Omega-3 Fish Oil. Rich in essential fatty acids for overall well-being.",
+    "Price": 30,
+    "PictureUrl": "images/products/healthcare-delta-omega-3-fish-oil.png",
+    "ProductTypeId": 27,
+    "ProductBrandId": 27
+  },
+  {
+    "Name": "Cairo Calcium Supplement",
+    "Description": "Strengthen your bones with Cairo Calcium Supplement. A vital addition to support bone health and development.",
+    "Price": 18,
+    "PictureUrl": "images/products/healthcare-cairo-calcium.png",
+    "ProductTypeId": 28,
+    "ProductBrandId": 28
+  },
+  {
+    "Name": "Luxor Lavender Essential Oil",
+    "Description": "Experience the calming effects of Luxor Lavender Essential Oil. Perfect for aromatherapy and relaxation.",
+    "Price": 20,
+    "PictureUrl": "images/products/healthcare-luxor-lavender-essential-oil.png",
+    "ProductTypeId": 29,
+    "ProductBrandId": 29
+  },
+  {
+    "Name": "Sphinx Immune Support Gummies",
+    "Description": "Boost your immune system with Sphinx Immune Support Gummies. Delicious and effective for daily health maintenance.",
+    "Price": 12,
+    "PictureUrl": "images/products/healthcare-sphinx-immune-support-gummies.png",
+    "ProductTypeId": 30,
+    "ProductBrandId": 30
+  },
+  {
+    "Name": "Pharaoh's First Aid Kit",
+    "Description": "Be prepared for emergencies with Pharaoh's First Aid Kit. A comprehensive set for minor injuries and wound care.",
+    "Price": 40,
+    "PictureUrl": "images/products/healthcare-pharaoh-first-aid-kit.png",
+    "ProductTypeId": 31,
+    "ProductBrandId": 31
+  },
+  {
+    "Name": "Nile Stress Relief Capsules",
+    "Description": "Combat stress with Nile Stress Relief Capsules. Formulated to promote relaxation and mental well-being.",
+    "Price": 28,
+    "PictureUrl": "images/products/healthcare-nile-stress-relief-capsules.png",
+    "ProductTypeId": 32,
+    "ProductBrandId": 32
+  }
+]

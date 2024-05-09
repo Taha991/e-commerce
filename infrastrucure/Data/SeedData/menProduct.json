@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "Elegant Pharaoh Suit",
+    "Description": "A sophisticated suit inspired by ancient Egyptian aesthetics. Perfect for formal occasions and events.",
+    "Price": 250,
+    "PictureUrl": "images/products/suit-pharaoh.png",
+    "ProductTypeId": 1,
+    "ProductBrandId": 17
+  },
+  {
+    "Name": "Sphinx Style Fedora",
+    "Description": "Achieve a timeless look with this Sphinx-inspired fedora. Adds a touch of class to any outfit.",
+    "Price": 30,
+    "PictureUrl": "images/products/fedora-sphinx.png",
+    "ProductTypeId": 2,
+    "ProductBrandId": 18
+  },
+  {
+    "Name": "Cairo Classic Boots",
+    "Description": "Step out in style with these classic Cairo boots. Comfortable and versatile for various occasions.",
+    "Price": 120,
+    "PictureUrl": "images/products/boots-cairo.png",
+    "ProductTypeId": 3,
+    "ProductBrandId": 19
+  },
+  {
+    "Name": "Pharaoh's Leather Gloves",
+    "Description": "Luxurious leather gloves inspired by the pharaohs of Egypt. Keep your hands warm in style.",
+    "Price": 45,
+    "PictureUrl": "images/products/gloves-pharaoh-leather.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 20
+  },
+  {
+    "Name": "Nile Blue Denim Jeans",
+    "Description": "Classic blue denim jeans with a modern twist. Comfortable and stylish for casual wear.",
+    "Price": 50,
+    "PictureUrl": "images/products/jeans-nile-blue.png",
+    "ProductTypeId": 5,
+    "ProductBrandId": 21
+  },
+  {
+    "Name": "Egyptian Cotton Polo Shirt",
+    "Description": "Experience the comfort of Egyptian cotton with this stylish polo shirt. Perfect for a casual and polished look.",
+    "Price": 35,
+    "PictureUrl": "images/products/shirt-polo-egyptian-cotton.png",
+    "ProductTypeId": 6,
+    "ProductBrandId": 22
+  },
+  {
+    "Name": "Sphinx Silk Tie",
+    "Description": "Elevate your formal attire with this Sphinx-themed silk tie. A symbol of elegance and sophistication.",
+    "Price": 25,
+    "PictureUrl": "images/products/tie-sphinx-silk.png",
+    "ProductTypeId": 7,
+    "ProductBrandId": 23
+  },
+  {
+    "Name": "Luxor Leather Belt",
+    "Description": "Complete your ensemble with this luxurious leather belt inspired by the ancient city of Luxor.",
+    "Price": 40,
+    "PictureUrl": "images/products/belt-luxor-leather.png",
+    "ProductTypeId": 8,
+    "ProductBrandId": 24
+  }
+]
