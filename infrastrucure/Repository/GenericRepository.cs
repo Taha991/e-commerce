@@ -1,32 +1,29 @@
-﻿using Core.Entities;
-using infrastrucure.Data;
-using infrastrucure.Interfaces;
-using infrastrucure.Spacification;
+﻿using Core.Interfaces;
+using Core.Specification;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace infrastrucure.Repository
+namespace Infrastructure.Repository
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly StoreContext _context;
-        public GenericRepository(StoreContext Context)
+        private readonly DbContext _context;
+
+        public GenericRepository(DbContext context)
         {
-            _context = Context;
+            _context = context;
         }
 
-        public async Task<int> CountAsync(ISpacification<T> spec)
+        public async Task<int> CountAsync(Specification<T> spec)
         {
-            return await ApplySpecifiction(spec).CountAsync();
+            return await ApplySpecification(spec).CountAsync();
         }
 
         public async Task<IReadOnlyList<T>> GetAllAsync()
         {
-           return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
@@ -34,19 +31,46 @@ namespace infrastrucure.Repository
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public async Task<T> GetEntityWithSpacification(ISpacification<T> spec)
+        public async Task<T> GetEntityWithSpecification(Specification<T> spec)
         {
-            return await ApplySpecifiction(spec).FirstOrDefaultAsync();
+            return await ApplySpecification(spec).FirstOrDefaultAsync();
         }
 
-        public async Task<IReadOnlyList<T>> ListAsync(ISpacification<T> spec)
+        public async Task<IReadOnlyList<T>> ListAsync(Specification<T> spec)
         {
-            return await ApplySpecifiction(spec).ToListAsync();
+            return await ApplySpecification(spec).ToListAsync();
         }
 
-        private IQueryable<T> ApplySpecifiction(ISpacification<T> spec)
+        private IQueryable<T> ApplySpecification(Specification<T> spec)
         {
-            return SpacificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
+            var query = _context.Set<T>().AsQueryable();
+
+            if (spec.Criteria != null)
+            {
+                query = query.Where(spec.Criteria);
+            }
+
+            foreach (var include in spec.Includes)
+            {
+                query = query.Include(include);
+            }
+
+            if (spec.OrderByAsc != null)
+            {
+                query = query.OrderBy(spec.OrderByAsc);
+            }
+
+            if (spec.OrderByDec != null)
+            {
+                query = query.OrderByDescending(spec.OrderByDec);
+            }
+
+            if (spec.IsPagingEnabled)
+            {
+                query = query.Skip(spec.Skip).Take(spec.Take);
+            }
+
+            return query;
         }
     }
 }

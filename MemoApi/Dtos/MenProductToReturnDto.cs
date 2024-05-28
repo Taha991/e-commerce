@@ -1,5 +1,4 @@
-﻿using Core.Entities;
-
+﻿
 namespace MemoApi.Dtos
 {
     public class MenProductToReturnDto
